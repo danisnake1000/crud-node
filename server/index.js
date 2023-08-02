@@ -1,12 +1,13 @@
 import express from "express";
 import { PORT } from "./config.js";
-import indexroute from "./routes/index.routes.js";
-import  aroutes  from "./routes/analisys.routes.js";
+import indedexxx from "./routes/index.routes.js"
+import useroutes  from "./routes/anaimals.routes.js";
 
 const app = express();
+app.use(express.json());
+app.use(indedexxx); 
 
-app.use(indexroute);
-app.use(aroutes);
+app.use(useroutes);
 
 app.listen(PORT);
 console.log(`server conectado al puerto: ${PORT}`);
